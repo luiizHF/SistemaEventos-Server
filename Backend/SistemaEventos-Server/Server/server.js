@@ -1,4 +1,4 @@
-require('../config/config');
+require('./config/config');
 // import * as cors from 'cors';
 
 const express = require('express');
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.use(require('../routes/user.route'));
+app.use(require('./routes/user.route'));
 
 
 
