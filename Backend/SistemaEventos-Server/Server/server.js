@@ -1,13 +1,13 @@
 require('./config/config');
 // import * as cors from 'cors';
 
-const express = require('express');
+const express = require('./node_modules/express');
 const mongoose = require('mongoose');
 
 
 const app = express();
 
-const bodyParser = require('body-parser');
+const bodyParser = require('./node_modules/body-parser');
 
 // =====================
 // Verificar cors
