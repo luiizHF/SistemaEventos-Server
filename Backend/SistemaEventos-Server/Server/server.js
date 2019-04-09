@@ -1,30 +1,13 @@
 require('./config/config');
 // import * as cors from 'cors';
 
-const express = require('./node_modules/express');
+const express = require('express');
 const mongoose = require('mongoose');
 
 
 const app = express();
 
-const bodyParser = require('./node_modules/body-parser');
-
-// =====================
-// Verificar cors
-// =====================
-
-// app.use((req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Acept, Athorization"
-//     );
-//     if (req.method === 'OPTIONS') {
-//         res,
-//         header('Access-Control-Allow-Mthods', 'GET; POST, PUT, DELETE, PATCH');
-//         return res.status(200).json({});
-//     }
-// })
+const bodyParser = require('body-parser');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -46,6 +29,8 @@ mongoose.connect(process.env.URLDB, { useNewUrlParse: true, useCreateIndex: true
 
     }
 );
+
+
 
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto: ', process.env.PORT);
