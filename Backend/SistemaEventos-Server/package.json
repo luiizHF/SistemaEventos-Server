@@ -1,10 +1,10 @@
 {
-    "name": "sistemadeeventos",
+    "name": "sistemaeventos-server",
     "version": "1.0.0",
     "engines": {
         "node": "11.13.0"
     },
-    "description": "Sistema de eventos para la FIHNEC",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "start": "node server/server.js",
@@ -15,9 +15,9 @@
     "dependencies": {
         "bcrypt": "^3.0.5",
         "express": "^4.16.4",
-        "mongoose": "^5.4.21",
+        "mongoose": "^5.4.23",
         "mongoose-unique-validator": "^2.0.2",
+        "nodemon": "^1.18.10",
         "underscore": "^1.9.1"
-    },
-    "devDependencies": {}
+    }
 }

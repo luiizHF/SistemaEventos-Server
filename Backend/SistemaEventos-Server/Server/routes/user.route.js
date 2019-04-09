@@ -1,14 +1,14 @@
-const express = require('../node_modules/express');
+const express = require('express');
 
-const bcrypt = require('../node_modules/bcrypt/bcrypt');
-const _ = require('../node_modules/underscore/underscore');
+const bcrypt = require('bcrypt');
+const _ = require('underscore');
 
-const Usuario = require('../models/user.model');
+const Usuario = require('../models/user');
 
 const app = express();
 
 
-app.get('/usuarios', function(req, res) {
+app.get('/usuario', function(req, res) {
 
 
 
@@ -46,7 +46,7 @@ app.get('/usuarios', function(req, res) {
 
 });
 
-app.post('/usuarios', function(req, res) {
+app.post('/usuario', function(req, res) {
 
     let body = req.body;
 
@@ -79,7 +79,7 @@ app.post('/usuarios', function(req, res) {
 
 });
 
-app.put('/usuarios/:id', function(req, res) {
+app.put('/usuario/:id', function(req, res) {
 
     let id = req.params.id;
     let body = _.pick(req.body, ['nombre', 'email', 'img', 'role', 'estado']);
@@ -104,7 +104,7 @@ app.put('/usuarios/:id', function(req, res) {
 
 });
 
-app.delete('/usuarios/:id', function(req, res) {
+app.delete('/usuario/:id', function(req, res) {
 
 
     let id = req.params.id;
